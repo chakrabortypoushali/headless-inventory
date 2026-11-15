@@ -1,0 +1,29 @@
+[project]
+name = "inventory-api"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "poushali", email = "poushali.debroy@gmail.com" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "fastapi[standard]>=0.163.1",
+    "psycopg[binary,pool]>=3.3.9",
+    "pwdlib[argon2]>=0.4.2",
+    "pyjwt>=2.15.1",
+    "python-dotenv>=1.2.4",
+]
+
+[project.scripts]
+inventory-api = "inventory_api:main"
+
+[build-system]
+requires = ["uv_build>=0.13.8,<0.14.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.2.0",
+    "ruff>=0.17.5",
+]
