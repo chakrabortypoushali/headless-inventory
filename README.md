@@ -13,4 +13,4 @@ FastAPI + PostgreSQL (Row-Level Security) + JWT.
 ## Security notes
 - The API connects as a limited role, never as the postgres superuser.
 - Every tenant table uses Row-Level Security keyed on `app.tenant_id`.
-- Never commit `.env`.
+  
